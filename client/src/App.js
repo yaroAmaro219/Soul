@@ -1,11 +1,19 @@
 import React from 'react';
-import './App.css';
+import { Route, Switch } from 'react-router-dom'
+import Home from './components/Home'
+import Post from './components/Post'
 
 function App() {
   return (
     <div className="App">
-      <h1>Soul Deep Soul</h1>
-      <h4>A blog focused on what we know about the soul mind body connection</h4>
+      <Switch>
+      <Route exact path="/" render={(props) => (
+      <Home />
+      )} />
+      <Route exact path="/" render={(props) => (
+      <Post />
+        )} />
+        </Switch>
     </div>
   );
 }
